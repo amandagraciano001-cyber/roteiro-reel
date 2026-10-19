@@ -9,6 +9,7 @@ Abra PASTA/gravacao.html no navegador. No teleprompter: espaço pausa e continua
 fica salvo neste navegador. Nada sai do seu computador.
 """
 import argparse
+import sys
 import html
 import json
 import os
@@ -108,4 +109,6 @@ def main():
 
 
 if __name__ == "__main__":
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     main()

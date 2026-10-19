@@ -1,0 +1,4 @@
+interface:
+  display_name: "Roteiro reel"
+  short_description: "Roteiro de reel na sua voz, com capa e legendas"
+  default_prompt: "Use $roteiro-reel pra escrever um roteiro de reel sobre (tema). Se ainda não conhece a minha voz, me entrevista primeiro."

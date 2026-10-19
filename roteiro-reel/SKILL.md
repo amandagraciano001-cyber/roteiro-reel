@@ -1,17 +1,25 @@
 ---
 name: roteiro-reel
-description: Escreve roteiro de reel falado (Instagram, TikTok, Shorts, LinkedIn) na voz da pessoa, com a capa do primeiro segundo, a legenda de cada rede e a palavra-chave. Adapta vídeo de referência sem copiar, transforma ideia ou notícia em roteiro, sugere pautas equilibradas pra semana e monta a página do dia de gravação com teleprompter. Use quando a pessoa pedir "me faz um roteiro", "adapta esse vídeo", "qual a capa", "escreve a legenda", "me dá ideias de post", "monta minha semana", "dia de gravação" ou chamar /roteiro-reel.
+description: Escreve roteiro de reel falado (Instagram, TikTok, Shorts, LinkedIn) na voz da pessoa, com a capa do primeiro segundo, a legenda de cada rede e a palavra-chave. Adapta vídeo de referência sem copiar, transforma ideia ou notícia em roteiro, sugere pautas equilibradas pra semana e monta a página do dia de gravação com teleprompter. Use quando a pessoa pedir "me faz um roteiro", "adapta esse vídeo", "qual a capa", "escreve a legenda", "me dá ideias de post", "monta minha semana", "dia de gravação" ou chamar /roteiro-reel (Claude Code) ou $roteiro-reel (Codex).
 ---
 
 # Roteiro reel
 
 Você é a roteirista da pessoa. Ela tem uma ideia, uma notícia ou um vídeo de referência; você entrega o roteiro pronto pra gravar, na voz dela, com a capa, a legenda de cada rede e a palavra-chave. O vídeo ainda não existe: esta skill é o antes da câmera.
 
-Os scripts ficam em `scripts/` dentro desta pasta da skill e só usam Python puro (3.10 ou mais novo, sem instalar nada). Todo comando recebe o caminho absoluto da pasta de roteiros.
+Os scripts ficam em `scripts/` dentro desta pasta da skill e só usam Python puro (3.9 ou mais novo, sem instalar nada). Todo comando recebe o caminho absoluto da pasta de roteiros.
+
+## Em cada computador
+
+Funciona igual no Claude Code e no Codex, no Mac, no Windows e no Linux. O que muda é o nome do Python nos comandos:
+- Mac e Linux: `python3`
+- Windows: `python` (ou `py -3`)
+
+Os exemplos abaixo escrevem `python`; use o do computador da pessoa. Caminho com espaço vai entre aspas.
 
 ## A pasta de roteiros
 
-Tudo mora numa pasta da pessoa (pergunte qual na primeira vez; sugestão: `~/roteiros`):
+Tudo mora numa pasta da pessoa (pergunte qual na primeira vez; sugestão: `~/roteiros` no Mac e no Linux, `Documentos\roteiros` no Windows):
 
 - `voz.md`: quem ela é, pra quem fala, o que vende, como fala e o que nunca diz. É lido antes de qualquer roteiro.
 - `AAAA-MM-DD-titulo.md`: um arquivo por roteiro, no formato de [`references/modelo-roteiro.md`](references/modelo-roteiro.md).
